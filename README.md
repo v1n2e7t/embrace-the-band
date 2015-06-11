@@ -1,2 +1,8 @@
 # ios
-Embrace+ utilizes a simple concept of light and vibration that alerts you to changes in your environment. It brings a smart and subtle change to our daily lifestyle as it keeps us connected to our phone no matter what we are doing, when we are doing it, and where we are at.
+
+Im going to be working with the embrace plus source code, adding features and fixing bugs over time here. 
+Add an issue with any features you would like to see here
+
+
+# Thursday June 11th, 2015 8:55am
+-Added theatre mode (disables lights, only a vibrations)
