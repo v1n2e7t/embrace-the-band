@@ -499,6 +499,16 @@ int selectFxIndex;
     c3Index = [EmbColor getColorIndex:rFromR g:rFromG b:rFromB];
     c4Index = [EmbColor getColorIndex:rToR g:rToG b:rToB];
     
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    BOOL noLight = [defaults boolForKey:@"noLight"];
+    
+    if(noLight == true) {
+        c1Index = 0;
+        c2Index = 0;
+        c3Index = 0;
+        c4Index = 0;
+    }
+    
     Byte byte[11];
     
     byte[0] = appId;
