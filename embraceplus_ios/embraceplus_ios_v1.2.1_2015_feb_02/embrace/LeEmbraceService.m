@@ -470,7 +470,8 @@ int selectFxIndex;
     }
     data = [[NSData alloc] initWithBytes:byte length:10];
 
-    
+    NSLog(@"data: %@", data);
+
     if(servicePeripheral)
         [servicePeripheral writeValue:data forCharacteristic:effectCommandCharacteristic type:CBCharacteristicWriteWithResponse];
     
@@ -535,6 +536,7 @@ int selectFxIndex;
         NSLog(@"write data = 0x%x",byte[i]);
     }
     data = [[NSData alloc] initWithBytes:byte length:11];
+    NSLog(@"data: %@", data);
     
     if(servicePeripheral)
         [servicePeripheral writeValue:data  forCharacteristic:updateConfigCharacteristic type:CBCharacteristicWriteWithResponse];
@@ -811,6 +813,13 @@ int selectFxIndex;
                     silent = 1;
                     isVibrate = 0;
                 }
+                NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                BOOL noLight = [defaults boolForKey:@"noLight"];
+                
+                if(noLight == true) {
+                    silent = 1;
+                }
+
           
                 //写
                 [self writeEffectCommand:lFromR lFromG:lFromG lFromB:lFromB lToR:lToR lToG:lToG lToB:lToB rFromR:rFromR rFromG:rFromG rFromB:rFromB rToR:rToR rToG:rToG rToB:rToB DURATION:durationTime1 DURATION2:durationTime2 BLACKOUT:isBlackout RANDOM:isRandom HOLD:hold PAUSE:pause SILENT:silent VIBRATE:isVibrate LOOP:loop];
