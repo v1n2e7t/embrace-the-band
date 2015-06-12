@@ -4,10 +4,10 @@ Im going to be working with the embrace plus source code, adding features and fi
 Add an issue with any features you would like to see here
 
 
-# Thursday June 11th, 2015 8:55am
--Added theatre mode (disables lights, only a vibrations) 
-    --UPDATE--
-      a little buggy, working on that now
+### Thursday June 11th, 2015 8:55am
+-Added theatre mode (disables lights, only a vibrations) - BUGGY 
+### Friday June 12th, 2015 9:29am
+-Theatre Mode Fixed
 
 #Donate
 I will be continuing this project for free forever if you like what i have done feel free to donate
